@@ -1,38 +1,257 @@
-.App {
+body {
+  background-image: url('background2.jpg');
+  background-size: cover; 
+  background-position: center;
+  margin: 0; 
+  height: 100vh;
+};
+
+.header-title {
   text-align: center;
+  font-size: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.register-grid {
+  position: relative;
+  top: 100px;
+  padding: 0 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.register-paper {
+  padding: 30px 20px;
+  width: 500px;
+  margin: 20px auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.register-avatar {
+  background-color: #59260e;
+}
+
+.register-header {
+  margin: 5px 0;
+}
+
+.register-form {
+  padding: 10px 10px;
+}
+
+.register-box {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.register-icon {
+  color: #59260e;
+  margin-right: 8px;
+}
+
+.register-textfield {
+  flex: 1;
+}
+
+.register-button-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.register-button {
+  background-color: #59260e;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.register-login-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+
+.login-grid {
+  position: relative;
+  top: 100px;
+  padding: 0 20px;
+}
+
+.login-paper {
+  padding: 30px 20px;
+  width: 500px;
+  margin: 20px auto;
+}
+
+.login-avatar {
+  background-color: #59260e;
+}
+
+.login-header {
+  margin: 5px 0;
+}
+
+.login-form {
+  padding: 10px 10px;
+}
+
+.login-box {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.login-icon {
+  color: #59260e;
+  margin-right: 8px;
+}
+
+.login-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.login-button {
+  background-color: #59260e;
+}
+
+.login-register-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+
+.searchbar-container {
+  margin-top: 90px;
+}
+
+.searchbar-paper {
+  width: 550px;
+  margin: 0 auto;
+}
+
+.searchbar-image {
+  padding: 50px;
+  width: 80%;
+  height: auto;
+  margin-bottom: 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+  .searchbar-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    
+}
+
+.searchbar-form {
+  display: flex;
+  flex-direction: row; 
+  padding: 5px;
+}
+
+.searchbar-button {
+  height: 35px;
+  margin-left: 5px;
+  background-color: #59260e;
+}
+
+.suggestions-paper {
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+  cursor: pointer;
+}
+
+.logout-button-container {
+  display: flex;
+  justify-content: center;
+  padding-right: 16px;
+  padding-bottom: 16px;
+}
+
+.logout-button {
+  background-color: #59260e;
+}
+@media (mix-width: 1024px){
+  .searchbar-form {
+    align-items: center;
+    width: 400px;
   }
 }
+
+
+@media (max-width: 1024px) {
+  .register-paper, .login-paper, .searchbar-paper {
+      width: 80%;
+  }
+  .header-title {
+    font-size: 1.8rem;
+}
+}
+
+
+@media (max-width: 768px) {
+  .register-paper, .login-paper, .searchbar-paper {
+      width: 90%;
+  }
+  .header-title {
+    font-size: 1.6rem;
+}
+}
+
+@media (max-width: 480px) {
+  .register-paper, .login-paper {
+      width: 90%;
+  }
+  .header-title {
+    font-size: 0.5em;
+}
+
+  .searchbar-image {
+      padding: 30px;
+  }
+  .searchbar-paper{
+    margin-top: 100px;
+    height: 300px;
+  }
+  .searchbar-form {
+    flex-direction: column; 
+    align-items: center;
+}
+
+  .searchbar-box {
+      flex-direction: column;
+      align-items: stretch;
+      max-width: 100%;
+  }
+
+  .searchbar-button {
+      height: 30px;
+      width: 36%;
+      margin-left: 0;
+      margin-top: 10px;
+  }
+
+  .suggestions-paper {
+      top: 90px;
+      right: 0.1%;
+  }
+
+  .logout-button-container {
+      padding-right: 0;
+      padding-top: 10px;
+      height: 30px;
+      
+  }
+  .login-button {
+    height: 30px;
+}
+}
+

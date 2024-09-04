@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import './App.css'; 
+import React from 'react';
+import Header from './Components/Header';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Register from './Components/Register';
+import Login from './Components/Login';
+import SearchBar from './Components/SearchBar';
+import BookList from './Components/BookList';
+import BookDetails from './Components/BookDetails';
+const App = () => {
+    return (
+            <BrowserRouter>
+            <Header />
+                <Routes>
+                    <Route path="/" element={<Register />} />
+                    <Route path="/Register" element={<Register />} />
+                    <Route path="/Login" element={<Login />} />
+                    <Route path="/SearchBar" element={<SearchBar />} />
+                    <Route path="/BookList" element={<BookList />}></Route>
+                    <Route path="/BookDetails/:id" element={<BookDetails />} />
+                </Routes>
+            </BrowserRouter>
+        
+    );
+};
 
 export default App;
